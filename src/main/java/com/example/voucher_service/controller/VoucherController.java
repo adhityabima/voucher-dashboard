@@ -1,4 +1,4 @@
-package com.example.voucher_dashboard.controller;
+package com.example.voucher_service.controller;
 
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

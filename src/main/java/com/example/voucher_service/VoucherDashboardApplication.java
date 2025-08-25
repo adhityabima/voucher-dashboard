@@ -1,4 +1,4 @@
-package com.example.voucher_dashboard;
+package com.example.voucher_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
