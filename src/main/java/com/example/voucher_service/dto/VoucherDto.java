@@ -1,5 +1,7 @@
 package com.example.voucher_service.dto;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -15,8 +17,9 @@ public class VoucherDto {
     private Long id;
     private String code;
     private Double amount;
-    private String expiryDate;
-    private String couponStatus;
-    private String createdAt;
-    private String updatedAt;
+    private LocalDateTime expiryDate;
+    private String voucherStatus;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+    private VoucherCategoryDto voucherCategory;
 }

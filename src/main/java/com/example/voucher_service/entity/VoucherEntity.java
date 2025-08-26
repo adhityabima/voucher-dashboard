@@ -5,12 +5,14 @@ import com.example.voucher_service.entity.enums.VoucherStatusEnum;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "voucher")
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class VoucherEntity {
 
     @Id
@@ -28,11 +30,15 @@ public class VoucherEntity {
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private VoucherStatusEnum couponStatus;
+    private VoucherStatusEnum voucherStatus;
 
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
     @Column(nullable = false)
     private LocalDateTime updatedAt;
+
+    @ManyToOne
+    @JoinColumn(name = "voucher_category_id")
+    private VoucherCategoryEntity voucherCategory;
 }
